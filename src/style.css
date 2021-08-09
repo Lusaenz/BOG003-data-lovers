@@ -1,0 +1,44 @@
+p{
+font-family:'Lancelot', cursive;
+text-align: center;
+height:400px;
+margin:300;
+display:block
+}
+header{
+
+}
+nav{
+  float:right;
+}
+
+nav ul li #item{
+  list-style: none;
+  margin-left: 70px;
+  padding: 25px 0;
+  float:left;
+}
+nav ul li a{
+  text-decoration:none;
+  font-weight: bold;
+}
+nav ul li #item #desple{
+  display: none;
+}
+.imaprimera{
+ height:400px;
+ display:block;
+ margin:auto;
+}
+.imalogo{
+ width:100px;
+ height:100px;
+ margin-left:0px;
+ margin-top: 1px;
+ padding: 10px;
+}
+.titulo{
+ height:100px;
+ display:block;
+ margin:auto;
+}
