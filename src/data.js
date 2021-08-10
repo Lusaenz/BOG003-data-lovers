@@ -1,11 +1,24 @@
 // estas funciones son de ejemplo
 
-export const example = (data) => {
-  return data;
-};
-const  loMasPro= []
+export {ordenarData}
+//let arrAux=[]
+    //let dataOrdenada = data.rt_score
+    function ordenarData(data){
 
+  //let arrAux = data.sort((a, b) => {
+  let arrAux = data
+      if (parseInt(a.rt_score) < parseInt(b.rt_score) ){
+        return -1;
+      }
+      if (parseInt(a.rt_score) > parseInt(b.rt_score) ){
+        return 1;
+      }
+      return 0;
+    });
 
-export const anotherExample = () => {
-  return 'OMG';
+    return arrAux;
+    //console.log(arrAux);
+//}
+//export const anotherExample = () => {
+//  return 'OMG';
 };
