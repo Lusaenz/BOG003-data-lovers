@@ -5,14 +5,12 @@ height:400px;
 margin:300;
 display:block
 }
-header{
 
-}
 nav{
   float:right;
 }
 
-nav ul li #item{
+#item{
   list-style: none;
   margin-left: 70px;
   padding: 25px 0;
@@ -22,9 +20,18 @@ nav ul li a{
   text-decoration:none;
   font-weight: bold;
 }
-nav ul li #item #desple{
-  display: none;
+ .desple{
+  display:none;
 }
+.mostrar{
+  display: block;
+}
+/* #desple:hover{
+display:block;
+}*/
+
+
+
 .imaprimera{
  height:400px;
  display:block;
