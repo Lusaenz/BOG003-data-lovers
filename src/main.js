@@ -1,4 +1,4 @@
-import { ordenarData } from './data.js';
+import { ordenarData, ordenarDataAz } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -6,24 +6,25 @@ import data from './data/ghibli/ghibli.js';
 
 
 const rankingPeliculas = document.getElementById('item');
-rankingPeliculas.addEventListener("click", function(){
-const desple = document.getElementById('desple');
-desple.classList.toggle("mostrar")
+rankingPeliculas.addEventListener("click", function () {
+  const desple = document.getElementById('desple');
+  desple.classList.toggle("mostrar")
 });
 
-let listaPeliculas = data.films;
-//console.log(listaPeliculas[0].poster);
-listaPeliculas.forEach((pelicula)=>{
-  let poster = document.createElement("IMG");
-  poster.setAttribute("src",pelicula.poster);
-  document.querySelector(".segundapagina").appendChild(poster);
+let listaPeliculas = ordenarData(data.films);
 
-});
+let listaOrdenada = ordenarDataAz(data.films);
 
-ordenarData(listaPeliculas);
+mostrar(listaPeliculas);
 
-/*for (let i = 0; i < listaPeliculas.length; i++) {
-  let poster = document.createElement("IMG");
-  poster.setAttribute("src", listaPeliculas[i].poster);
-  document.querySelector(".segundapagina").appendChild(poster);
-}*/
+// Funcion para mostrar portadas
+function mostrar(peliculas) {
+  document.querySelector(".segundapagina").innerHTML = "";
+  peliculas.forEach((pelicula) => {
+    let poster = document.createElement("IMG");
+    poster.setAttribute("src", pelicula.poster);
+    document.querySelector(".segundapagina").appendChild(poster);
+
+  });
+}
+
