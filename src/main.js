@@ -12,21 +12,12 @@ desple.classList.toggle("mostrar")
 });
 
 let listaPeliculas = data.films;
-const peliculasOrdenadas = (listaPeliculas)=>{
-
 //console.log(listaPeliculas[0].poster);
 listaPeliculas.forEach((pelicula)=>{
   let poster = document.createElement("IMG");
   poster.setAttribute("src",pelicula.poster);
   document.querySelector(".segundapagina").appendChild(poster);
 
-});
-}
-
-const altopuntaje = document.getElementById('altopuntaje');
-altopuntaje.addEventListener("click", function(){
-let dataordenada = ordenarData(data);
-peliculasOrdenadas(dataordenada);
 });
 
 ordenarData(listaPeliculas);
