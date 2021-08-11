@@ -1,3 +1,10 @@
+.esconder {
+  display: none;
+}
+.mostrar{
+   display: block;
+}
+
 p{
 font-family:'Lancelot', cursive;
 text-align: center;

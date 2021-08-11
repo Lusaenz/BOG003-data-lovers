@@ -15,8 +15,8 @@ export {ordenarData}
       return 0;
     });
 
-    //return arrAux;
-    console.log(arrAux);
+    return arrAux;
+    //console.log(arrAux);
 }
 //export const anotherExample = () => {
 //  return 'OMG';

@@ -5,22 +5,26 @@ import data from './data/ghibli/ghibli.js';
 //console.log(example(data./films));
 
 
-const rankingPeliculas = document.getElementById('item');
+const rankingPeliculas = document.getElementById("item");
 rankingPeliculas.addEventListener("click", function(){
-const desple = document.getElementById('desple');
+const desple = document.getElementById("desple");
 desple.classList.toggle("mostrar")
 });
 
-let listaPeliculas = data.films;
+let listaPeliculas = ordenarData(data.films);
 //console.log(listaPeliculas[0].poster);
 listaPeliculas.forEach((pelicula)=>{
   let poster = document.createElement("IMG");
   poster.setAttribute("src",pelicula.poster);
   document.querySelector(".segundapagina").appendChild(poster);
-
 });
 
-ordenarData(listaPeliculas);
+const bienvenida = document.querySelector(".primerapagina");
+const loMasPro = document.querySelector(".altopuntaje");
+loMasPro.addEventListener("click",()=>{
+  bienvenida.classList.add("esconder");
+  loMasPro.classList.remove("esconder");
+})
 
 /*for (let i = 0; i < listaPeliculas.length; i++) {
   let poster = document.createElement("IMG");
