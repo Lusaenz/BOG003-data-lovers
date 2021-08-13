@@ -20,7 +20,7 @@ export {ordenarData}
 export {filtroLoMasPro}
 function filtroLoMasPro(mayorPuntaje){
   let resultado = mayorPuntaje.filter(item=>{
-    return item.rt_score >=70;
+    return item.rt_score >=80;
     });
     return resultado;
 }

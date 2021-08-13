@@ -16,6 +16,7 @@ let listaPeliculas = ordenarData(data.films);
 mostrarPoster(listaPeliculas);
 
 function mostrarPoster(arrpeliculas){
+  document.querySelector(".segundapagina").innerHTML="";
    arrpeliculas.forEach((pelicula)=>{
     let poster = document.createElement("IMG");
     poster.setAttribute("src", pelicula.poster);
