@@ -5,7 +5,6 @@ import data from './data/ghibli/ghibli.js';
 //console.log(example(data./films));
 
 
-const rankingPeliculas = document.getElementById("item");
 rankingPeliculas.addEventListener("click", function(){
 const desple = document.getElementById("desple");
 desple.classList.toggle("mostrar")
