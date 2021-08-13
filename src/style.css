@@ -1,0 +1,56 @@
+.esconder {
+  display: none;
+}
+.mostrar{
+   display: block;
+}
+
+p{
+font-family:'Lancelot', cursive;
+text-align: center;
+height:400px;
+margin:300;
+display:block
+}
+
+nav{
+  float:right;
+}
+
+#item{
+  list-style: none;
+  margin-left: 70px;
+  padding: 25px 0;
+  float:left;
+}
+nav ul li a{
+  text-decoration:none;
+  font-weight: bold;
+}
+ .desple{
+  display:none;
+}
+.mostrar{
+  display: block;
+}
+
+.imaprimera{
+ height:400px;
+ display:block;
+ margin:auto;
+}
+.imalogo{
+ width:100px;
+ height:100px;
+ margin-left:0px;
+ margin-top: 1px;
+ padding: 10px;
+}
+.titulo{
+ height:100px;
+ display:block;
+ margin:auto;
+}
+.segundapagina{
+  display: none;
+}
