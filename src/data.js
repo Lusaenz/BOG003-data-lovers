@@ -24,6 +24,15 @@ function filtroLoMasPro(mayorPuntaje){
     });
     return resultado;
 }
+
+
+export { filtroLoMenosPro }
+function filtroLoMenosPro(peliculas) {
+  let resultado = peliculas.filter((pelicula) => {
+    return pelicula.rt_score < 80;
+  });
+  return resultado;
+}
 /*export const ordenAcendente = function(data){
   return data.sort((a,b)=>a.)
 }*/
