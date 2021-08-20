@@ -1,54 +1,53 @@
-import { ordenarData,filtroLoMasPro,filtroLoMenosPro } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/ghibli/ghibli.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-//console.log(example(data./films));
+import { ordenarPorPuntaje, filtroLoMasPro, filtroLoMenosPro } from "./data.js";
+import data from "./data/ghibli/ghibli.js";
 
+// Ordenar peliculas por puntaje
+let peliculas = ordenarPorPuntaje(data.films);
 
 const rankingPeliculas = document.getElementById("item");
-rankingPeliculas.addEventListener("click", function(){
-const desple = document.getElementById("desple");
-desple.classList.toggle("mostrar")
+const menuDesplegable = document.getElementById("desple");
+const menuTodo = document.querySelector(".todo");
+const menuLoMasTop = document.querySelector(".altopuntaje");
+const menuLoMenosTop = document.querySelector(".bajopuntaje");
+const primeraPagina = document.querySelector(".primerapagina");
+const segundaPagina = document.querySelector(".segundapagina");
+const titulo = document.querySelector("#titulo");
+
+rankingPeliculas.addEventListener("click", function () {
+  menuDesplegable.classList.toggle("mostrar");
 });
 
-let listaPeliculas = ordenarData(data.films);
-//console.log(listaPeliculas[0].poster);
-mostrarPoster(listaPeliculas);
-
-function mostrarPoster(arrpeliculas){
-   arrpeliculas.forEach((pelicula)=>{
-    let poster = document.createElement("IMG");
-    poster.setAttribute("src", pelicula.poster);
-    document.querySelector(".segundapagina").appendChild(poster);
-  
-});
-
-const bienvenida = document.querySelector(".primerapagina");
-const loMasPro = document.querySelector(".altopuntaje");
-const contenedorSegunaPagina = document.querySelector(".segundapagina");
-loMasPro.addEventListener("click",()=>{
-  contenedorSegunaPagina.style.display="block";
-  bienvenida.classList.add("esconder");
-  loMasPro.classList.remove("esconder");
-  let mayorPuntaje = ordenarData(data.films);
-  let arryLoMasPro = filtroLoMasPro(mayorPuntaje);
-  mostrarPoster(arryLoMasPro);
-});
+function mostrarSegundaPagina() {
+  segundaPagina.classList.add("mostrar");
+  primeraPagina.classList.add("esconder");
 }
 
-let menuBajoPuntaje = document.querySelector(".bajopuntaje");
-menuBajoPuntaje.addEventListener("click", () => {
-  let segundaPagina = document.querySelector(".segundapagina");
-  
-  document.querySelector(".primerapagina").classList.add("esconder");
-  segundaPagina.style.display="block";
+function mostrarPosters(peliculas, textoTitulo) {
+  titulo.innerText = textoTitulo;
 
+  // Limpiar segunda pagina
   segundaPagina.innerHTML = "";
-  let titulo = document.createElement("h1");
-  titulo.innerText = "Lo menos top";
-  segundaPagina.appendChild(titulo);
 
-  let loMenosTop = filtroLoMenosPro(listaPeliculas);
+  peliculas.forEach((pelicula) => {
+    const poster = document.createElement("IMG");
+    poster.setAttribute("src", pelicula.poster);
+    document.querySelector(".segundapagina").appendChild(poster);
+  });
+}
 
-  mostrarPoster(loMenosTop)
+menuTodo.addEventListener("click", () => {
+  mostrarSegundaPagina();
+  mostrarPosters(peliculas, "Todo");
+});
+
+menuLoMasTop.addEventListener("click", () => {
+  mostrarSegundaPagina();
+  let topPeliculas = filtroLoMasPro(peliculas);
+  mostrarPosters(topPeliculas, "Lo mas top");
+});
+
+menuLoMenosTop.addEventListener("click", () => {
+  mostrarSegundaPagina();
+  let loMenosTopPeliculas = filtroLoMenosPro(peliculas);
+  mostrarPosters(loMenosTopPeliculas, "Lo menos top");
 });
