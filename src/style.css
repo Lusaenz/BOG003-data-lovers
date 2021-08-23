@@ -33,11 +33,6 @@ nav ul li a{
 .mostrar{
   display: block;
 }
-/* #desple:hover{
-display:block;
-}*/
-
-
 
 .imaprimera{
  height:400px;
@@ -55,4 +50,7 @@ display:block;
  height:100px;
  display:block;
  margin:auto;
+}
+.segundapagina{
+  display: none;
 }
