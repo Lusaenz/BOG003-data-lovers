@@ -1,13 +1,11 @@
 import{ordenarPorPuntaje,filtroLoMasPro,filtroLoMenosPro}from'./data.js';
-// import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-//console.log(example(data./films));
+
 
 // Ordenar peliculas por puntaje
 let peliculas = ordenarPorPuntaje(data.films);
 
-//const menuInicio = dicument.getElementById("")
+const menuInicio = document.getElementById("inicio")
 const rankingPeliculas = document.getElementById("item");
 const menuDesplegable = document.getElementById("desple");
 const menuTodo = document.querySelector(".todo");
@@ -21,10 +19,22 @@ const terceraPagina = document.querySelector(".tercerapagina");
 rankingPeliculas.addEventListener("click", function () {
   menuDesplegable.classList.toggle("mostrar");
 });
-
+function mostrarPrimeraPagina() {
+  segundaPagina.classList.remove("mostrar");
+  primeraPagina.classList.remove("esconder");
+  terceraPagina.classList.remove("esconder");
+  titulo.classList.add("esconder");
+}
 function mostrarSegundaPagina() {
   segundaPagina.classList.add("mostrar");
   primeraPagina.classList.add("esconder");
+}
+function mostrarTerceraPagina() {
+  segundaPagina.classList.remove("esconder");
+  primeraPagina.classList.remove("esconder");
+  terceraPagina.classList.remove("mostrar");
+  titulo.classList.add("esconder");
+  
 }
 
 function mostrarPosters(peliculas, textoTitulo) {
@@ -53,10 +63,14 @@ function mostrarPosters(peliculas, textoTitulo) {
     document.querySelector(".segundapagina").appendChild(calificacionPelicula);
   });
 }
-
+ 
+menuInicio.addEventListener("click", () => {
+  mostrarPrimeraPagina();
+});
 menuTodo.addEventListener("click", () => {
   mostrarSegundaPagina();
   mostrarPosters(peliculas, "Todo");
+ 
 });
 
 menuLoMasTop.addEventListener("click", () => {
@@ -69,6 +83,9 @@ menuLoMenosTop.addEventListener("click", () => {
   mostrarSegundaPagina();
   let loMenosTopPeliculas = filtroLoMenosPro(peliculas);
   mostrarPosters(loMenosTopPeliculas, "Lo menos top");
+});
+terceraPagina.addEventListener("click",() => {
+  mostrarTerceraPagina
 });
  // Limpiar tercera pagina
  terceraPagina.innerHTML = "";
@@ -94,6 +111,7 @@ function contenedorTerceraPagina(pelicula){
   const lanzamiento = document.createElement("h4");
   lanzamiento.innerHTML = pelicula.release_date;
   lanzamiento.setAttribute("class","lanzamiento");
+
   document.querySelector(".tercerapagina").appendChild(poster);
   document.querySelector(".tercerapagina").appendChild(nombrePelicula);
   document.querySelector(".tercerapagina").appendChild(calificacionPelicula);
