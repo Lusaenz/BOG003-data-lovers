@@ -1,9 +1,3 @@
-.esconder {
-  display: none;
-}
-.mostrar{
-   display: block;
-}
 
 p{
 font-family:'Lancelot', cursive;
@@ -30,9 +24,6 @@ nav ul li a{
  .desple{
   display:none;
 }
-.mostrar{
-  display: block;
-}
 
 .imaprimera{
  height:400px;
@@ -55,8 +46,8 @@ nav ul li a{
   display: none;
 }
 
-.segundapagina.mostrar {
-  display: grid;
+.segundapagina_mostrar {
+  display: grid!important;
   grid-template-columns: repeat(auto-fill, 200px);
   grid-gap: 1rem;
   justify-content: space-around;
@@ -80,4 +71,10 @@ margin:auto;
 }
 .bt_menu{
   color: brown;
+}
+.esconder {
+  display: none!important;
+}
+.mostrar{
+   display: block;
 }

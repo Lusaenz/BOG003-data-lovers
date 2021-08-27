@@ -20,13 +20,15 @@ rankingPeliculas.addEventListener("click", function () {
   menuDesplegable.classList.toggle("mostrar");
 });
 function mostrarPrimeraPagina() {
-  segundaPagina.classList.remove("mostrar");
+  segundaPagina.classList.remove("segundapagina_mostrar");
   primeraPagina.classList.remove("esconder");
-  terceraPagina.classList.remove("esconder");
+  terceraPagina.style.display="none";
+  
+
   titulo.classList.add("esconder");
 }
 function mostrarSegundaPagina() {
-  segundaPagina.classList.add("mostrar");
+  segundaPagina.classList.add("segundapagina_mostrar");
   primeraPagina.classList.add("esconder");
 }
 function mostrarTerceraPagina() {

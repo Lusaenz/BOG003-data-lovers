@@ -66,14 +66,11 @@ describe(filtroLoMasPro, () => {
 
 let filtoImplementado=[
   {
-   "rt_score": "100",
-  },
+   "rt_score": "100",},
   {
-   "rt_score": "97",
-  },
+   "rt_score": "97",},
   {
-   "rt_score": "93",
-  },
+   "rt_score": "93",},
   ]
   
   it('FiltroLoMasPro debera filtrar solo las calificaciones mas altas', () => {
@@ -83,10 +80,10 @@ let filtoImplementado=[
 let filtroMenorPuntaje=[
   { "rt_score": "100", },
   { "rt_score": "93", },
-  {     "rt_score": "41",   },
-  {     "rt_score": "83",   },
-  {     "rt_score": "75",   },
-  {     "rt_score": "78",   }, 
+  { "rt_score": "41",   },
+  { "rt_score": "83",   },
+  {  "rt_score": "75",   },
+  {  "rt_score": "78",   }, 
   
   ]
   describe(filtroLoMenosPro, () => {
@@ -94,10 +91,10 @@ let filtroMenorPuntaje=[
       expect(typeof filtroLoMenosPro).toBe('function');
     });
 let filtroImpleMenor=[
-  {     "rt_score": "41",   },
-  {     "rt_score": "83",   },
-  {     "rt_score": "75",   },
-  {     "rt_score": "78",   },   
+  {  "rt_score": "41",   },
+  {  "rt_score": "83",   },
+  {  "rt_score": "75",   },
+  {  "rt_score": "78",   },   
   ]
     it('FiltroLoMenosPro debera filtrar solo las calificaciones bajas', () => {
       expect(filtroLoMenosPro(filtroMenorPuntaje)).toStrictEqual(filtroImpleMenor);
