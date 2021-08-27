@@ -46,8 +46,8 @@ nav ul li a{
   display: none;
 }
 
-.segundapagina_mostrar {
-  display: grid!important;
+.segundapagina{
+  display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
   grid-gap: 1rem;
   justify-content: space-around;

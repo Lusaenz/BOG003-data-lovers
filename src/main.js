@@ -19,23 +19,24 @@ const terceraPagina = document.querySelector(".tercerapagina");
 rankingPeliculas.addEventListener("click", function () {
   menuDesplegable.classList.toggle("mostrar");
 });
-function mostrarPrimeraPagina() {
-  segundaPagina.classList.remove("segundapagina_mostrar");
-  primeraPagina.classList.remove("esconder");
-  terceraPagina.style.display="none";
-  
-
+function ocultarSecciones() {
+   document.querySelectorAll(".seccion").forEach((seccion)=>{
+    seccion.classList.add("esconder");
+  });
   titulo.classList.add("esconder");
+}
+function mostrarPrimeraPagina() {
+  ocultarSecciones()
+  primeraPagina.classList.remove("esconder");
 }
 function mostrarSegundaPagina() {
-  segundaPagina.classList.add("segundapagina_mostrar");
-  primeraPagina.classList.add("esconder");
+  ocultarSecciones()
+  segundaPagina.classList.remove("esconder");
+  titulo.classList.remove("esconder");
 }
 function mostrarTerceraPagina() {
-  segundaPagina.classList.remove("esconder");
-  primeraPagina.classList.remove("esconder");
-  terceraPagina.classList.remove("mostrar");
-  titulo.classList.add("esconder");
+  ocultarSecciones()
+  terceraPagina.classList.remove("esconder");
   
 }
 
@@ -55,24 +56,22 @@ function mostrarPosters(peliculas, textoTitulo) {
     nombrePelicula.innerHTML = pelicula.title;
     poster.setAttribute("src", pelicula.poster);
     poster.addEventListener("click",() =>{
-      segundaPagina.style.display="none";
-      terceraPagina.style.display="block";
-      titulo.style.display="none";
+      mostrarTerceraPagina()
       contenedorTerceraPagina(pelicula);
     })
-    document.querySelector(".segundapagina").appendChild(poster);
-    document.querySelector(".segundapagina").appendChild(nombrePelicula);
-    document.querySelector(".segundapagina").appendChild(calificacionPelicula);
+    segundaPagina.appendChild(poster);
+    segundaPagina.appendChild(nombrePelicula);
+    segundaPagina.appendChild(calificacionPelicula);
   });
 }
  
 menuInicio.addEventListener("click", () => {
   mostrarPrimeraPagina();
 });
+
 menuTodo.addEventListener("click", () => {
   mostrarSegundaPagina();
   mostrarPosters(peliculas, "Todo");
- 
 });
 
 menuLoMasTop.addEventListener("click", () => {
@@ -86,13 +85,13 @@ menuLoMenosTop.addEventListener("click", () => {
   let loMenosTopPeliculas = filtroLoMenosPro(peliculas);
   mostrarPosters(loMenosTopPeliculas, "Lo menos top");
 });
+
 terceraPagina.addEventListener("click",() => {
   mostrarTerceraPagina
 });
- // Limpiar tercera pagina
- terceraPagina.innerHTML = "";
-
+ 
 function contenedorTerceraPagina(pelicula){
+  terceraPagina.innerHTML = "";
   const poster = document.createElement("IMG");
   poster.setAttribute("src", pelicula.poster);
   const nombrePelicula = document.createElement("h3");
@@ -114,11 +113,11 @@ function contenedorTerceraPagina(pelicula){
   lanzamiento.innerHTML = pelicula.release_date;
   lanzamiento.setAttribute("class","lanzamiento");
 
-  document.querySelector(".tercerapagina").appendChild(poster);
-  document.querySelector(".tercerapagina").appendChild(nombrePelicula);
-  document.querySelector(".tercerapagina").appendChild(calificacionPelicula);
-  document.querySelector(".tercerapagina").appendChild(lanzamiento);
-  document.querySelector(".tercerapagina").appendChild(director);
-  document.querySelector(".tercerapagina").appendChild(productor);
-  document.querySelector(".tercerapagina").appendChild(sinopsis);
+  terceraPagina.appendChild(poster);
+  terceraPagina.appendChild(nombrePelicula);
+  terceraPagina.appendChild(calificacionPelicula);
+  terceraPagina.appendChild(lanzamiento);
+  terceraPagina.appendChild(director);
+  terceraPagina.appendChild(productor);
+  terceraPagina.appendChild(sinopsis);
 }
