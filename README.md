@@ -60,4 +60,15 @@ H.U.4- YO COMO fan de las películas de studio ghibli QUIERO ver por quien fue d
 
 
 ## .Diseño de la Interfaz de Usuario
-El diseño de nuestra página web es de bajo impacto donde se podrá visualizar todos los elementos agregados en la página web , la herramienta que utilizamos para diseñar nuestros diseños de bajo impacto fue Balsamiq.
+El diseño de nuestra página web es de baja fidelidad donde se podrá visualizar todos los elementos agregados en la página web , la herramienta que utilizamos para diseñar nuestros diseños de baja fidelidad fue Balsamiq.
+![Prototipo-baja-fidelidad-1era](https://github.com/Lusaenz/BOG003-data-lovers/blob/main/src/imag/Prototipo-1era-pagina.png)
+![Prototipo-baja-fidelidad-2da](https://github.com/Lusaenz/BOG003-data-lovers/blob/main/src/imag/Prototipo-2da-pagi.png)
+![Prototipo-baja-fidelidad-2dav](https://github.com/Lusaenz/BOG003-data-lovers/blob/main/src/imag/Prototipo-2da-pagina.png)
+![Prototipo-baja-fidelidad-3era](https://github.com/Lusaenz/BOG003-data-lovers/blob/main/src/imag/Prototipo-3ra-pagina..png)
+
+## .Testeos de usabilidad
+Al realizar los testeos de usabilidad nos dimos cuenta que debíamos de agregar una pestaña en el menú de navegación para volver a la primera página, también agregarle una nueva opción en el ranking películas donde el usuario visualizará todas las películas del studio ghibli.
+
+
+
+
