@@ -17,7 +17,7 @@ nav{
   float:right;
 }
 
-#item{
+#item,#inicio{
   list-style: none;
   margin-left: 70px;
   padding: 25px 0;
@@ -53,4 +53,31 @@ nav ul li a{
 }
 .segundapagina{
   display: none;
+}
+
+.segundapagina.mostrar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-gap: 1rem;
+  justify-content: space-around;
+}
+
+.segundapagina > img {
+  box-shadow: 0px 10px 20px -10px black;
+}
+.titulopeliculas{
+color:black;
+width:90%;
+max-width:1024px;
+margin:auto;
+}
+.puntaje{
+  color: brown;
+}
+.titulopeli,.calificacion,.sinopsis,.director,.productor,.lanzamiento{
+ height:100px;
+ margin:auto;
+}
+.bt_menu{
+  color: brown;
 }
