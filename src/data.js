@@ -18,7 +18,7 @@ export const filtroLoMasPro = function (peliculas) {
 };
 
 export const filtroLoMenosPro = function (peliculas) {
-  return peliculas.filter((pelicula) => {
+  return peliculas.filter((pelicula) =>{
     return pelicula.rt_score < 85;
   });
 };
