@@ -2,7 +2,7 @@
 
 ## 1 Descripción del proyecto
 
-Página web creada para fans de las películas del studio ghibli, llamada クラブGHIBLI-CLUB GHIBLI en esta página el usuario encontrará una breve descripción del studio ghibli, encontrará todas las películas clasificada según su calificación de criterios tomatometro dividades en lo más top y en lo menos top, también encontrarán una descripción de cada película y podran ver quien la dirigió, sus productores, el año de lanzamiento y el nombre de cada película. 
+Página web creada para fans de las películas del studio ghibli, llamada クラブGHIBLI - CLUB GHIBLI en esta página el usuario encontrará una breve descripción del studio ghibli, encontrarán todas las películas clasificada según su calificación de criterios tomatometro dividades en las más papulares y en las menos populares, también encontrarán una descripción de cada película y podran ver quien la dirigió, su productor, el año de lanzamiento y el nombre de cada película. 
 
 ## 2. Historia de usuario
 
