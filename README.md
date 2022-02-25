@@ -81,9 +81,15 @@ Se realizo un diseño de baja fidelidad donde se podrá visualizar todos los ele
 ![Prototipo-baja-fidelidad-3era](https://github.com/Lusaenz/BOG003-data-lovers/blob/main/src/imag/Prototipo-3ra-pagina..png)
 
 
-## 5.Testeos de usabilidad
+## 4.Testeos de usabilidad
 
 Se realizar testeos de usabilidad, bajo este testeo se realizan modificaciones para mejorar la interación del usuario en la pagina, se agrega una pestaña en el menú de navegación para volver a la primera página, también se agrego una nueva opción en el ranking películas donde el usuario visualizará todas las películas del studio ghibli.
+
+## 5. Visualización de la página web.
+En este [Link]() podras interactuar con la página web.
+
+***
+
 
 
 

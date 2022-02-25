@@ -50,19 +50,19 @@ function mostrarPosters(peliculas, textoTitulo) {
     const poster = document.createElement("IMG");
     const nombrePelicula = document.createElement("p");
     const calificacionPelicula = document.createElement("h2");
-    calificacionPelicula.innerHTML=pelicula.rt_score;
-    calificacionPelicula.setAttribute("class","puntaje");
+    calificacionPelicula.innerHTML= pelicula.rt_score;
     nombrePelicula.setAttribute("class","titulopelicula");
     nombrePelicula.innerHTML = pelicula.title;
     poster.setAttribute("src", pelicula.poster);
     poster.addEventListener("click",() =>{
       mostrarTerceraPagina()
       contenedorTerceraPagina(pelicula);
+
     })
     segundaPagina.appendChild(poster);
     segundaPagina.appendChild(nombrePelicula);
-    segundaPagina.appendChild(calificacionPelicula);
-  });
+
+  })
 }
  
 menuInicio.addEventListener("click", () => {
@@ -71,19 +71,19 @@ menuInicio.addEventListener("click", () => {
 
 menuTodo.addEventListener("click", () => {
   mostrarSegundaPagina();
-  mostrarPosters(peliculas, "Todo");
+  mostrarPosters(peliculas, "All movies ");
 });
 
 menuLoMasTop.addEventListener("click", () => {
   mostrarSegundaPagina();
   let topPeliculas = filtroLoMasPro(peliculas);
-  mostrarPosters(topPeliculas, "Lo mas top");
+  mostrarPosters(topPeliculas, "The most popular");
 });
 
 menuLoMenosTop.addEventListener("click", () => {
   mostrarSegundaPagina();
   let loMenosTopPeliculas = filtroLoMenosPro(peliculas);
-  mostrarPosters(loMenosTopPeliculas, "Lo menos top");
+  mostrarPosters(loMenosTopPeliculas, "The least popular");
 });
 
 terceraPagina.addEventListener("click",() => {
@@ -103,13 +103,13 @@ function contenedorTerceraPagina(pelicula){
   const sinopsis = document.createElement("p");
   sinopsis.innerHTML = pelicula.description;
   sinopsis.setAttribute("class","sinopsis");
-  const director = document.createElement("h4");
+  const director = document.createElement("h6");
   director.innerHTML = pelicula.director;
   director.setAttribute("class","director");
-  const productor = document.createElement("h4");
+  const productor = document.createElement("h7");
   productor.innerHTML = pelicula.producer;
   productor.setAttribute("class","productor");
-  const lanzamiento = document.createElement("h4");
+  const lanzamiento = document.createElement("h5");
   lanzamiento.innerHTML = pelicula.release_date;
   lanzamiento.setAttribute("class","lanzamiento");
 
@@ -120,4 +120,5 @@ function contenedorTerceraPagina(pelicula){
   terceraPagina.appendChild(director);
   terceraPagina.appendChild(productor);
   terceraPagina.appendChild(sinopsis);
+ 
 }

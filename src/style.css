@@ -1,80 +1,206 @@
-
-p{
-font-family:'Lancelot', cursive;
-text-align: center;
-height:400px;
-margin:300;
-display:block
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-nav{
-  float:right;
+p {
+  font-family: "Lancelot", cursive;
 }
+header{
+  background: #EDBB99;
+  height: 150px;
+  width: 100%;
 
-#item,#inicio{
+}
+/*******Primera sección de la pagina******/
+.imalogo {
+  width: 90px;
+  height: 90px;
+  margin-top: 20px;
+  margin-left: 10px;
+  
+}
+nav {
+  margin-top:20px;
+  margin-right: 200px;
+  float: right;
+  font-family: "Lancelot", cursive;
+}
+#item,
+#inicio {
   list-style: none;
-  margin-left: 70px;
+  margin-left: 30px;
   padding: 25px 0;
-  float:left;
+  float: left;
+ 
 }
-nav ul li a{
-  text-decoration:none;
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
   font-weight: bold;
+  color: #6E2C00;
+  transition: background-color .5s;
 }
- .desple{
-  display:none;
+a:hover {
+  color: #D35400;
 }
+ul a:nth-child(3){
+  font-size: 9px;
+}
+.desple {
+  display: none;
+  text-decoration: none;
+ list-style:none 
+}
+.primerapagina {
+  display: flex;
+  margin-top: 68px;
+  height: 100%;
+  width: 100%;
+  
+}
+.parrafo {
+  position: relative;
+  padding-top: 100px;
+  margin-left: 10px;
+  height: 500px;
+  width: 500px;
+}
+.descripcion {
+  margin-top: 20px;
+  color: #5F6A6A;
+  text-align: center;
+  font-size: 17px;
+}
+.titulo {
+  height: 100px;
+  display: block;
+  margin-left: 300px;
+}
+.imaprimera {
+  height: 400px;
+  display: block;
+  margin: auto;
+  margin-left: 350px;
 
-.imaprimera{
- height:400px;
- display:block;
- margin:auto;
 }
-.imalogo{
- width:100px;
- height:100px;
- margin-left:0px;
- margin-top: 1px;
- padding: 10px;
+/*******Segunda sección de la pagina******/
+h1 {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Lancelot", cursive;
+  color: #6E2C00;
 }
-.titulo{
- height:100px;
- display:block;
- margin:auto;
-}
-.segundapagina{
+.segundapagina {
   display: none;
 }
-
-.segundapagina{
+.segundapagina {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  grid-gap: 1rem;
+  position: relative;
+  grid-template-columns: repeat(auto-fill, 220px);
   justify-content: space-around;
+  margin-top: 20px;
+  width: 100%;
 }
-
 .segundapagina > img {
-  box-shadow: 0px 10px 20px -10px black;
+  position: relative;
+  margin-left: 80px;
+  margin-bottom: 70px;
+  margin-top: 20px;
 }
-.titulopeliculas{
-color:black;
-width:90%;
-max-width:1024px;
-margin:auto;
+.segundapagina > img:hover {
+  box-shadow: 8px 20px 30px -10px #6E2C00;
 }
-.puntaje{
-  color: brown;
+.segundapagina > p {
+  position: relative;
+  font-size: 20px;
+  color: black;
+  height: 80px;
+  width: 200px;
+  margin-top: 100px;
+  margin-bottom: 25px;
+  margin-left: 30px;
+  color: #6E2C00;
 }
-.titulopeli,.calificacion,.sinopsis,.director,.productor,.lanzamiento{
- height:100px;
- margin:auto;
+/*******Tercera sección de la pagina******/
+.tercerapagina {
+  display: grid;
+  text-align: justify;
+  background-image: url("https://us.123rf.com/450wm/exoticvector/exoticvector1802/exoticvector180200770/96069171-fondo-de-brillo-de-vector-lindos-peque%C3%B1os-puntos-dorados-que-caen-fondo-de-chispa-textura-de-confeti.jpg");
+  height: 100%;
 }
-.bt_menu{
+.tercerapagina > img{
+  margin-top: 20px;
+  box-shadow: 0px 10px 30px -10px #6E2C00;
+  margin-left: 650px;
+}
+h3{
+  display: inline-block;
+  margin-top: 20px;
+  color: #6E2C00;
+  font-size: 27px;
+  line-height: 35px ;
+  margin-left: 650px;
+  width: 550px;
+  height: 50px;
+}
+h4{
+  display: inline-block;
+  color: #6E2C00;
+  font-size: 17px;
+  line-height: 35px ;
+  margin-left: 745px;
+  margin-top: 5px;
+  width: 50px;
+  height: 50px;
+}
+h5{
+  display: inline-block;
+  color: #6E2C00;
+  font-size: 17px;
+  line-height: 35px;
+  margin-left: 740px;
+  margin-top: 5px;
+  width: 50px;
+  height: 50px;
+}
+h6{
+  display: inline-block;
+  color: #6E2C00;
+  font-size: 17px;
+  line-height: 35px ;
+  margin-left: 720px;
+  margin-top: 5px;
+  width: 320px;
+  height: 50px;
+}
+h7{
+  display: inline-block;
+  color: #6E2C00;
+  font-size: 17px;
+  line-height: 35px ;
+  margin-left: 720px;
+  margin-top: 10px;
+  width: 320px;
+  height: 50px;
+}
+.tercerapagina > p{
+  display: inline-block;
+  color: #6E2C00;
+  font-size: 17px;
+  line-height: 35px ;
+  margin-left: 400px;;
+  margin-bottom: 10px;
+  width: 800px;
+  height: 250px;
+}
+.bt_menu {
   color: brown;
 }
 .esconder {
-  display: none!important;
+  display: none !important;
 }
-.mostrar{
-   display: block;
+.mostrar {
+  display: block;
 }
