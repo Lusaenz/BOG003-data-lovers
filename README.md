@@ -86,7 +86,7 @@ Se realizo un diseño de baja fidelidad donde se podrá visualizar todos los ele
 Se realizar testeos de usabilidad, bajo este testeo se realizan modificaciones para mejorar la interación del usuario en la pagina, se agrega una pestaña en el menú de navegación para volver a la primera página, también se agrego una nueva opción en el ranking películas donde el usuario visualizará todas las películas del studio ghibli.
 
 ## 5. Visualización de la página web.
-En este [Link](https://lusaenz.github.io/BOG003-data-lovers/src/#) podras interactuar con la página web.
+En este [Link](https://lusaenz.github.io/Data-lovers/src/) podra interactuar con la página web.
 
 ***
 
